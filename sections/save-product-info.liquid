@@ -1,0 +1,79 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+<div class="full p-35 col_imgtext-section">
+<div class="full col_imgtext-wrapper" style="background:{{ section.settings.bg_color }};">
+ {% if section.settings.image != blank %}
+<div class="col_img">
+<img src="{{ section.settings.image | img_url:'800x' }}" alt="" class="full" />
+</div>
+{%- endif -%}
+
+<div class="col_info">
+  <div class="col_infowrap">
+{% if section.settings.title != blank %}
+<h3>{{ section.settings.title }}</h3>
+{% endif %}
+     
+{% if section.settings.text != blank %}
+<div class="col_info_rte full">
+{{ section.settings.text }}
+</div>
+{% endif %}      
+
+{% if section.settings.button_label != blank %}
+<a href="{{ section.settings.link }}" class="button white-button">
+  {{ section.settings.button_label }}
+</a>
+{% endif %}
+</div>
+  
+</div>
+
+  
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Save product",
+    "settings": [
+{
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "image"
+              },
+      {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              },
+
+      {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text"
+              },
+      {
+                  "type": "text",
+                  "id": "button_label",
+                  "label": "Button label"
+              },
+      {
+                  "type": "url",
+                  "id": "link",
+                  "label": "Link"
+              },
+       {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background color"
+              }
+    ],
+  "presets": [
+    {
+     "name": "Save product"
+   
+    }
+  ]
+  }
+{% endschema %}

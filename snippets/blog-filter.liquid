@@ -1,0 +1,249 @@
+<input type="hidden" value="{{ blog.handle }}" id="new_collection_title"> 
+
+
+
+<div id="filter_box" class="fullset">
+{% if settings.filter_1_title != blank %}
+<div class="filter-list-all fullset">
+  <a id="flink_1" href="javascript:void(0)" class="f_heading">{{ settings.filter_1_title }} {% render 'icon-dp'  %}</a>   
+<span class="full alltext">All</span>
+  
+<div class="filter_col fullset" id="filter_1">
+  <div class="filter-header header_color">
+       <span><i>0</i> selected</span>
+        <a href="javascript:void(0)" onclick="unSelectSelectedOptions('by_flavor')" class="clear-color">Unselect all</a>
+      </div>
+    {% assign tags = settings.filter_1  | replace: ' ,', ',' | replace: ', ', ',' | split: ',' %}
+    <ul id='new_filter_1' class="new_filter_ul">
+      {% for t in tags %}
+    {% assign tag = t | strip %}
+      
+  {% assign newTagList2 = newTagList2 | append: ',' | append: tag  %}
+       
+    {% if current_tags contains tag %}
+    <li class="filter_new_1 {{ tag }}"><label class="filter_box">
+      <div class="check_1" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_color"  tabindex="{{ tag | downcase | handleize |  replace: "", "" }}" id="{{ tag | downcase | handleize |  replace: "", "" }}"  class="active coll-picker ba by_flavor" checked="checked" value="{{ tag | downcase | handleize |  replace: "", "" }}" onClick="return _fn_coll_filter_click();"> 
+      <span class="color active">{{ tag | remove: "type_" }}</span>
+      </label>
+      </li>
+   {% else %}
+     
+    <li class="filter_new_1 {{ tag }}"><label class="filter_box">
+      <div class="check_1" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_color" tabindex="{{ tag | downcase | handleize |  replace: "", "" }}" id="{{ tag | downcase | handleize |  replace: "", "" }}"  class="coll-picker ba by_flavor" value="{{ tag | downcase | handleize |  replace: "", "" }}" onClick="return _fn_coll_filter_click();">
+      <span class="color">{{ tag | remove: "type_" }}</span></label></li>
+    {% endif %}
+    {% endfor %}
+    </ul> 
+    
+  
+</div>
+</div>
+{% endif %}
+
+{% if settings.filter_2_title != blank %}
+<div class="filter-list-all fullset">
+  <a id="flink_2" href="javascript:void(0)" class="f_heading">{{ settings.filter_2_title }} {% render 'icon-dp'  %}</a>    
+  <span class="full alltext">All</span>
+<div class="filter_col fullset" id="filter_2">
+  <div class="filter-header header_size">
+       <span><i>0</i> selected</span>
+        <a href="javascript:void(0)" onclick="unSelectSelectedOptions('by_dish')" class="clear-size">Unselect all</a>
+      </div>
+    {% assign tags = settings.filter_2  | replace: ' ,', ',' | replace: ', ', ',' | split: ',' %}
+    <ul id='new_filter_2' class="new_filter_ul">
+      {% for t in tags %}
+    {% assign tag = t | strip %}
+      
+  {% assign newTagList2 = newTagList2 | append: ',' | append: tag  %}
+ 
+      
+    {% if current_tags contains tag %}
+    <li class="filter_new_2 {{ tag }}"><label class="filter_box">
+      <div class="check_2" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size"  tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="active coll-picker ba by_dish" checked="checked" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();"> 
+      <span class="color active">{{ tag | remove: "meal_" }}</span>
+      </label>
+      </li>
+   {% else %}
+     
+    <li class="filter_new_2 {{ tag }}"><label class="filter_box">
+      <div class="check_2" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size" tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="coll-picker ba by_dish" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();">
+      <span class="color">{{ tag | remove: "meal_" }}</span></label></li>
+    {% endif %}
+    {% endfor %}
+    </ul> 
+    
+   
+</div>
+</div>
+{% endif %}
+
+
+{% if settings.filter_3_title != blank %}
+<div class="filter-list-all fullset">
+  <a id="flink_3" href="javascript:void(0)" class="f_heading">{{ settings.filter_3_title }} {% render 'icon-dp'  %}</a>   
+  <span class="full alltext">All</span>
+<div class="filter_col fullset" id="filter_3">
+  <div class="filter-header header_size">
+       <span><i>0</i> selected</span>
+        <a href="javascript:void(0)" onclick="unSelectSelectedOptions('by_meal')" class="clear-size">Unselect all</a>
+      </div>
+    {% assign tags = settings.filter_3  | replace: ' ,', ',' | replace: ', ', ',' | split: ',' %}
+    <ul id='new_filter_3' class="new_filter_ul">
+      {% for t in tags %}
+    {% assign tag = t | strip %}
+      
+  {% assign newTagList3 = newTagList3 | append: ',' | append: tag  %}
+ 
+      
+    {% if current_tags contains tag %}
+    <li class="filter_new_3 {{ tag }}"><label class="filter_box">
+      <div class="check_3" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size"  tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="active coll-picker ba by_meal" checked="checked" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();"> 
+      <span class="color active">{{ tag | remove: "flavor_" }}</span>
+      </label>
+      </li>
+   {% else %}
+     
+    <li class="filter_new_3 {{ tag }}"><label class="filter_box">
+      <div class="check_3" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size" tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="coll-picker ba by_meal" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();">
+      <span class="color">{{ tag | remove: "flavor_" }}</span></label></li>
+    {% endif %}
+    {% endfor %}
+    </ul> 
+    
+   
+</div>
+</div>
+{% endif %}
+  
+{% if settings.filter_4_title != blank %}
+<div class="filter-list-all fullset 4th">
+  <a id="flink_4" href="javascript:void(0)" class="f_heading">{{ settings.filter_4_title }} {% render 'icon-dp'  %}</a>   
+  <span class="full alltext">All</span>
+<div class="filter_col fullset" id="filter_4">
+  <div class="filter-header header_size">
+       <span><i>0</i> selected</span>
+        <a href="javascript:void(0)" onclick="unSelectSelectedOptions('by_dietary_needs')" class="clear-size">Unselect all</a>
+      </div>
+    {% assign tags = settings.filter_4  | replace: ' ,', ',' | replace: ', ', ',' | split: ',' %}
+    <ul id='new_filter_4' class="new_filter_ul">
+      {% for t in tags %}
+    {% assign tag = t | strip %}
+      
+  {% assign newTagList4 = newTagList4 | append: ',' | append: tag  %}
+ 
+      
+    {% if current_tags contains tag %}
+    <li class="filter_new_4 {{ tag }}"><label class="filter_box">
+      <div class="check_4" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size"  tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="active coll-picker ba by_dietary_needs" checked="checked" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();"> 
+      <span class="color active">{{ tag | remove: "dietary_" }}</span>
+      </label>
+      </li>
+   {% else %}
+     
+    <li class="filter_new_4 {{ tag }}"><label class="filter_box">
+      <div class="check_4" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size" tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="coll-picker ba by_dietary_needs" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();">
+      <span class="color">{{ tag | remove: "dietary_" }}</span></label></li>
+    {% endif %}
+    {% endfor %}
+    </ul> 
+    
+   
+</div>
+</div>
+{% endif %}
+
+  {% if settings.filter_5_title != blank %}
+<div class="filter-list-all fullset">
+  <a id="flink_5" href="javascript:void(0)" class="f_heading">{{ settings.filter_5_title }} {% render 'icon-dp'  %}</a>    
+  <span class="full alltext">All</span>
+<div class="filter_col fullset" id="filter_5">
+  <div class="filter-header header_size">
+       <span><i>0</i> selected</span>
+        <a href="javascript:void(0)" class="clear-size">Unselect all</a>
+      </div>
+    {% assign tags = settings.filter_5  | replace: ' ,', ',' | replace: ', ', ',' | split: ',' %}
+    <ul id='new_filter_5' class="new_filter_ul">
+      {% for t in tags %}
+    {% assign tag = t | strip %}
+      
+  {% assign newTagList5 = newTagList5 | append: ',' | append: tag  %}
+ 
+      
+    {% if current_tags contains tag %}
+    <li class="filter_new_5 {{ tag }}"><label class="filter_box">
+      <div class="check_5" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size"  tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="active coll-picker ba" checked="checked" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();"> 
+      <span class="color active">{{ tag | remove: "ingredients_" }}</span>
+      </label>
+      </li>
+   {% else %}
+     
+    <li class="filter_new_5 {{ tag }}"><label class="filter_box">
+      <div class="check_5" style="display:none;">{{ tag }}</div>
+      <input type="checkbox" name="chkbox_filter_size" tabindex="{{ tag | downcase |  replace: "", "" }}" id="{{ tag | downcase |  replace: "", "" }}"  class="coll-picker ba" value="{{ tag | downcase |  replace: "", "" }}" onClick="return _fn_coll_filter_click();">
+      <span class="color">{{ tag | remove: "ingredients_" }}</span></label></li>
+    {% endif %}
+    {% endfor %}
+    </ul> 
+    
+   
+</div>
+</div>
+{% endif %}
+
+
+  
+<div class="filter-list-all pro_sorting  {% if blog.handle contains '?' %} show_short{% endif %}">
+ 
+     {%- assign sort_by = blog.sort_by | default: blog.default_sort_by -%}
+    <div class="facet-filters__field">      
+      <a id="flink_3" href="javascript:void(0)" class="f_heading">Sort</a>    
+      <div class="filter_col fullset" id="filter_6">  
+ 
+   <ul id='new_filter_2' class="new_filter_ul SortList">
+        {% for option in blog.sort_options %}
+      <li><a href="?sort_by={{ option.value }}" tabindex="{{ option.name | downcase |  replace: " ", "_" }}">{{ option.name | remove: 'Alphabetically, ' | remove: 'Date, ' }}</a></li>
+    {% endfor %}
+     </ul>
+       
+        
+
+    
+        <input id="DefaultSortBy" type="hidden" value="{{ blog.default_sort_by }}">
+        </div>
+
+    
+  </div>
+
+
+
+
+
+
+     
+</div>  
+  
+<!--   <div class="fil_tablinks" style="display:none;">
+    <a href="javascript:void(0)" class="apply_btn button">Apply</a>
+    <span id="clear_filter" class="clear_filter clear_filter_1 button">Clear all</span>
+  </div>   -->
+  
+  
+</div>
+  
+
+
+
+<style>
+#collection {
+    clear: both;
+}
+</style>

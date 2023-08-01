@@ -1,0 +1,86 @@
+<div class="full commitment_textinfo" style="background:{{ section.settings.bg_color }};">
+<div class="page-width">
+
+{% if section.settings.title != blank %}
+<h3 class="full center">{{ section.settings.title }}</h3>
+{% endif %} 
+  
+{% if section.settings.text != blank %}
+{{ section.settings.text }}
+{% endif %} 
+
+
+<div class="textinfo_row full">
+
+<div class="textinfo_50">
+{% if section.settings.stitle_1 != blank %}
+<h5 class="full">{{ section.settings.stitle_1 }}</h5>
+{% endif %}
+{% if section.settings.stext_1 != blank %}
+{{ section.settings.stext_1 }}
+{% endif %}
+</div>
+
+<div class="textinfo_50">
+{% if section.settings.stitle_2 != blank %}
+<h5 class="full">{{ section.settings.stitle_2 }}</h5>
+{% endif %}
+{% if section.settings.stext_2 != blank %}
+{{ section.settings.stext_2 }}
+{% endif %}
+</div>  
+
+  
+</div>    
+</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Text info",
+    "settings": [
+      {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              },
+      {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text"
+              },
+           {
+                  "type": "text",
+                  "id": "stitle_1",
+                  "label": "Small title"
+              },
+      {
+                  "type": "richtext",
+                  "id": "stext_1",
+                  "label": "Text"
+              },
+      {
+                  "type": "text",
+                  "id": "stitle_2",
+                  "label": "Small title"
+              },
+      {
+                  "type": "richtext",
+                  "id": "stext_2",
+                  "label": "Text"
+              },
+      {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background color",
+                  "default": "#F8B073"
+              }
+    ],
+    "presets": [
+        {
+             "name": "Text info"
+        }
+    ]
+  }
+{% endschema %}

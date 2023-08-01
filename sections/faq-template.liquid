@@ -1,0 +1,233 @@
+{{ 'faq.css' | asset_url | stylesheet_tag }}
+<div class="faq-section full fade-up fade-load p-35" style="background:{{ section.settings.bg_color }};">
+  {% if section.settings.title != blank %}
+<h3 class="full center">{{ section.settings.title }}</h3>
+   {% endif %} 
+    <div class="faq-main-wrap page-width">
+    <div class="faq-inner full line_wrap">
+      <div class="line_load line_left"> </div>
+
+<div id="General_a" class="tabcontent full line_wrap">
+            <div class="line_load line_top"> </div>
+            <h4 class="tab-h2">General</h4>
+            <div id="accordion" class="accordion line_wrap">
+              <div class="line_load line_left"> </div>
+             {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'General-Question' -%}
+                      <div class="faq_box full line_wrap">                        
+                        <h5 class="acclink full">{{ block.settings.general-title_a }}</h5>
+                        <div class="panel submenu full">
+                          {{ block.settings.general-answer_a }}
+                        </div>
+                        <div class="line_load"> </div>
+                      </div>
+                    {%- endcase -%}
+              {%- endfor -%}
+            
+            </div>
+            <div class="line_animation"> </div>
+          </div>
+      
+          <div id="General" class="tabcontent full line_wrap">
+           
+            <h4 class="tab-h2">Ingredients</h4>
+            <div id="accordion" class="accordion line_wrap">
+              <div class="line_animation line_left"> </div>
+             {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'Ingredients-Question' -%}
+                      <div class="faq_box full line_wrap">                        
+                        <h5 class="acclink full">{{ block.settings.general-title }}</h5>
+                        <div class="panel submenu full">
+                            {%- if block.settings.general-answer != blank -%}
+                          {{ block.settings.general-answer }}
+                              {%- endif -%}
+                       {%- if block.settings.general-answer2 != blank -%}
+                          <div class="panel_table full">
+                      {{ block.settings.general-answer2 }}
+                          </div>
+                         {%- endif -%}
+                        </div>
+                        <div class="line_animation"> </div>
+                      </div>
+                    {%- endcase -%}
+              {%- endfor -%}
+            
+            </div>
+            <div class="line_animation"> </div>
+          </div>
+
+          <div id="Shipping" class="tabcontent full line_wrap">            
+            <h4 class="tab-h2">SHIPPING & RETURNS</h4>
+            <div id="accordion-ship" class="accordion line_wrap">
+              <div class="line_animation line_left"> </div>
+             {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'Shipping-Question' -%}
+                      <div class="faq_box full line_wrap">
+                        <h5 class="acclink full">{{ block.settings.shipping-title }}</h5>
+                        <div class="panel submenu full">
+                          {{ block.settings.shipping-answer }}
+                        </div>
+                        <div class="line_animation"> </div>
+                      </div>
+                     {%- endcase -%}
+              {%- endfor -%}
+            </div>
+             <div class="line_animation"> </div>
+          </div>
+
+
+      <div id="Subscriptions" class="tabcontent full line_wrap">            
+            <h4 class="tab-h2">subscriptions</h4>
+            <div id="accordion-ship" class="accordion line_wrap">
+              <div class="line_animation line_left"> </div>
+             {%- for block in section.blocks -%}
+                    {%- case block.type -%}
+                      {%- when 'Subscriptions-Question' -%}
+                      <div class="faq_box full line_wrap">
+                        <h5 class="acclink full">{{ block.settings.subscriptions-title }}</h5>
+                        <div class="panel submenu full">
+                          {{ block.settings.subscriptions-answer }}
+                        </div>
+                        <div class="line_animation"> </div>
+                      </div>
+                     {%- endcase -%}
+              {%- endfor -%}
+            </div>
+             <div class="line_animation"> </div>
+          </div>
+          
+          
+       
+       {% if section.settings.faq_bottom_text != blank %}
+       <div id="faq_bottom_text" class="center full line_wrap">            
+            <div class="accordion line_wrap">
+              <div class="line_animation line_left"> </div>
+                      <div class="faq_box full line_wrap">            
+                        <div class="full center">
+                          {{ section.settings.faq_bottom_text }}
+                        </div>
+                        <div class="line_animation"> </div>
+                      </div>
+            </div>
+             <div class="line_animation"> </div>
+          </div>   
+         {% endif %}  
+      
+      <div class="line_load line_right"> </div>
+    </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "FAQ",
+   "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "id": "bg_color",
+      "type": "color",
+      "label": "Background color",
+      "default" : "#f8b073"
+    },
+     {
+          "type": "richtext",
+          "id": "faq_bottom_text",
+          "label": "Text"
+        }
+   ],
+  "max_blocks": 150,
+  "blocks": [
+    {
+      "type": "General-Question",
+      "name": "General",
+      "settings": [
+        {
+          "type": "text",
+          "id": "general-title_a",
+          "label": "Question"
+        },
+        {
+          "id": "general-answer_a",
+            "type": "richtext",
+            "label": "Answer",
+            "default": "<p>Add your text here</p>"
+        }
+        
+      ]
+    },
+    {
+      "type": "Ingredients-Question",
+      "name": "Ingredients",
+      "settings": [
+        {
+          "type": "text",
+          "id": "general-title",
+          "label": "Question"
+        },
+        {
+          "id": "general-answer",
+            "type": "richtext",
+            "label": "Answer",
+            "default": "<p>Add your text here</p>"
+        } ,
+        {
+          "id": "general-answer2",
+            "type": "html",
+            "label": "Table chart"
+        } 
+      ]
+    },
+    {
+      "type": "Shipping-Question",
+      "name": "Shipping & Returns",
+      "settings": [
+        {
+          "type": "text",
+          "id": "shipping-title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "shipping-answer",
+          "label": "Answer"
+        }
+      ]
+    },
+     {
+      "type": "Subscriptions-Question",
+      "name": "Subscriptions",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subscriptions-title",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "subscriptions-answer",
+          "label": "Answer"
+        }
+      ]
+    }
+    
+    
+  ],
+      "presets": [
+      {
+      "name": "FAQ",
+      "category": "FAQ"
+      }
+    ]
+}
+{% endschema %}
+
+
+
+

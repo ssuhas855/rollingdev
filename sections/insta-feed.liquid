@@ -1,0 +1,45 @@
+<div class="insta-wrapper full fade-up">
+  <div class="insta-header center full line_wrap">
+<h3 class="full">{{ section.settings.title }}</h3>
+<a href="{{ section.settings.link }}" class="h4 m-0" target="_blank">{{ section.settings.us_name }}</a>  
+
+<div class="line_animation line_top"> </div>                         
+<div class="line_animation line_right"> </div>  
+    <div class="line_animation line_left"> </div>                         
+<div class="line_animation"> </div>  
+    
+  </div>
+  <div id="insta-feed"></div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Insta feed",
+     "class": "insta-section p-35",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label":"Title"     
+    },
+      {
+      "type": "text",
+      "id": "us_name",
+      "label":"User name"     
+    },
+       {
+      "type": "text",
+      "id": "link",
+      "label":"Link"     
+    }
+    ],
+  "presets": [
+    {
+      "name": "Insta feed"
+      
+    }
+  ]
+  }
+{% endschema %}
+

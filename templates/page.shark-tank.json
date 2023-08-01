@@ -1,0 +1,193 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d67bdc02-3f86-4e7e-8c4b-647dcdca4213": {
+      "type": "home-banner",
+      "blocks": {
+        "8fb7c562-2bd7-41a7-bbe0-70bc1cc0bbe8": {
+          "type": "slide",
+          "settings": {
+            "select-option": "image",
+            "fullslider": "shopify:\/\/shop_images\/shark-tank-header.jpg",
+            "mo_fullslider": "shopify:\/\/shop_images\/sta.jpg",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/0ff010cae57148b6bd9225c6a6f4b8bb.mp4",
+            "text": "But where are the Millet tots and cauliflower wings?",
+            "button_label": "",
+            "button_link": "",
+            "color": "#ffffff",
+            "text-align": "top_left"
+          }
+        }
+      },
+      "block_order": [
+        "8fb7c562-2bd7-41a7-bbe0-70bc1cc0bbe8"
+      ],
+      "settings": {
+        "fix_icon_svg": ""
+      }
+    },
+    "1db9c8c6-4598-46d6-a50b-65fe57e72413": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15218995003453__1db9c8c6-4598-46d6-a50b-65fe57e72413-1687249384a066a6a0-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our product evolution post-<em>Shark Tank<\/em>",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "template--15218995003453__1db9c8c6-4598-46d6-a50b-65fe57e72413-1687249384a066a6a0-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "491fbe17-68f4-4f7d-bb0a-00ba33119cac": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15218995003453__491fbe17-68f4-4f7d-bb0a-00ba33119cac-1687249660d461a3c7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Swimming with the Sharks",
+            "heading_size": "h1"
+          }
+        },
+        "template--15218995003453__491fbe17-68f4-4f7d-bb0a-00ba33119cac-1687249660d461a3c7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>RollinGreens was thrilled to be featured on ABC’s hit-series <em>Shark Tank<\/em>. On the finale episode of Season 11, Chef Ko and Lindsey Cunningham debuted their delicious frozen Millet Tots and Cauliflower Wings and ultimately struck a deal with Robert Herjavec.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15218995003453__491fbe17-68f4-4f7d-bb0a-00ba33119cac-1687249660d461a3c7-0",
+        "template--15218995003453__491fbe17-68f4-4f7d-bb0a-00ba33119cac-1687249660d461a3c7-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image54.jpg",
+        "border_color": "#f8b073",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 40
+      }
+    },
+    "907ac040-0dc2-4fbb-8edf-03bbaba84a53": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15218995003453__907ac040-0dc2-4fbb-8edf-03bbaba84a53-1687249660d461a3c7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rollingreens is on a roll",
+            "heading_size": "h1"
+          }
+        },
+        "template--15218995003453__907ac040-0dc2-4fbb-8edf-03bbaba84a53-1687249660d461a3c7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Millet Tots and Cauliflower Wings continued to grow in popularity, but Chef Ko and Lindsey saw an opportunity for RollinGreens to feed people in a bigger, even better way. By making making delicious, plant-based protein in a shelf-stable, easy-to-use format, they could make business better — for the company, and for the environment.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15218995003453__907ac040-0dc2-4fbb-8edf-03bbaba84a53-1687249660d461a3c7-0",
+        "template--15218995003453__907ac040-0dc2-4fbb-8edf-03bbaba84a53-1687249660d461a3c7-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image55.jpg",
+        "border_color": "#ed627b",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "b0f8bca1-756e-408c-b344-cb2f104f23c0": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15218995003453__b0f8bca1-756e-408c-b344-cb2f104f23c0-1687249660d461a3c7-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Driving towards the future",
+            "heading_size": "h1"
+          }
+        },
+        "template--15218995003453__b0f8bca1-756e-408c-b344-cb2f104f23c0-1687249660d461a3c7-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Today, RollinGreens rolls on with innovative and delicious shelf-stable, plant-based protein ready to simmer in your kitchen. We continue to raise awareness around sustainable foods, conscientious water usage, animal welfare, supply chain transparency, harvest optimization, and more. And we’re just getting started. <br\/><br\/>RollinGreens is making it easier (and more delicious) than ever to eat better, feel better, and do better.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15218995003453__b0f8bca1-756e-408c-b344-cb2f104f23c0-1687249660d461a3c7-0",
+        "template--15218995003453__b0f8bca1-756e-408c-b344-cb2f104f23c0-1687249660d461a3c7-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image53.jpg",
+        "border_color": "#5d9d65",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "61b86d38-7e04-4529-8f1c-5204d6455d1a": {
+      "type": "save-product-info",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RollinGreens-Plant-Based-Protein-Bundle.jpg",
+        "title": "Save 15%",
+        "text": "<p>To celebrate our <em>Shark Tank <\/em>success, enter the code “<a href=\"#\" title=\"#\">SHARK15<\/a>” at checkout to receive a special one-time discount on your order.<\/p>",
+        "button_label": "SHOP NOW",
+        "link": "shopify:\/\/collections\/all",
+        "bg_color": "#80d2c9"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d67bdc02-3f86-4e7e-8c4b-647dcdca4213",
+    "1db9c8c6-4598-46d6-a50b-65fe57e72413",
+    "491fbe17-68f4-4f7d-bb0a-00ba33119cac",
+    "907ac040-0dc2-4fbb-8edf-03bbaba84a53",
+    "b0f8bca1-756e-408c-b344-cb2f104f23c0",
+    "61b86d38-7e04-4529-8f1c-5204d6455d1a"
+  ]
+}

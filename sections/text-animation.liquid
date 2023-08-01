@@ -1,0 +1,70 @@
+  <div class="text-animation fullset fade-up" style="background:{{ section.settings.text_bgcolor }};border-color:{{ section.settings.text_color }};color:{{ section.settings.text_color }};">
+  
+
+  <div class="text-animation_boxs text-slider">
+    <div>
+    <div class="text-slider_row">
+  {% for block in section.blocks %}
+  {% if block.settings.text != blank %}
+  <span>{{ block.settings.text }}</span>
+  {% endif %}
+  {% endfor %}
+   </div>
+  </div>
+
+    <div>
+    <div class="text-slider_row">
+  {% for block in section.blocks %}
+  {% if block.settings.text != blank %}
+  <span>{{ block.settings.text }}</span>
+  {% endif %}
+  {% endfor %}
+   </div>
+  </div>
+
+    
+  </div>
+
+  
+  </div>
+
+{% schema %}
+  {
+    "name": "Text animation",
+    "settings": [
+
+      {
+                    "type":"color",
+                    "id":"text_bgcolor",
+                    "label":"Background color",
+                    "default": "#fff"
+                },              
+               {
+                    "type":"color",
+                    "id":"text_color",
+                    "label":"Text color",
+                    "default": "#97d700"
+                }
+    ],
+    "blocks":[
+     {
+        "type":"text",
+         "name":"Text",
+            "settings":[
+              {
+                  "type": "text",
+                  "id": "text",
+                  "label": "Text"
+              }
+              
+              
+            ]
+     }
+    ],
+    "presets": [
+        {
+            "name": "Text animation"
+        }
+    ]
+  }
+{% endschema %}

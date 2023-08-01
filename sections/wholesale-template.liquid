@@ -1,0 +1,94 @@
+<div class="contact_section full fade-up fade-load p-35" style="background:{{ section.settings.bg_color }};">
+<div class="page-width line_wrap">
+  
+<div class="contact_wrap full line_wrap" id="wholesale_text_wrap">
+
+  <div class="full line_wrap" id="wholesale_text">
+  {% if section.settings.title_h != blank %}
+  <h3 class="full center">{{ section.settings.title_h | remove:'<p>' | remove:'</p>' }}</h3>
+    {% endif %}
+   {% if section.settings.text_h != blank %}
+{{ section.settings.text_h }}
+   {% endif %}
+     <div class="line_load line_top"> </div>  
+ 
+</div>
+
+  
+    {% if section.settings.text_m != blank %}
+      <div class="middleinfo_text line_wrap full">
+  {{ section.settings.text_m }}
+         <div class="line_load line_top"> </div>
+       </div>
+        {% endif %}
+ 
+ 
+
+
+   {% if section.settings.text_m != blank %}
+<div class="contact_add full center line_wrap">
+{{ section.settings.address }}
+<div class="line_load line_top"> </div> 
+  <div class="line_load"> </div>         
+</div>
+   {% endif %}
+
+
+
+<div class="line_load line_left"> </div>             
+<div class="line_load line_right"> </div> 
+
+  
+ </div> 
+</div>
+  
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Wholesale",
+    "class": "wholesale-section",
+    "settings": [
+       {
+                  "type": "header",
+                  "content": "Text"
+              },
+       {
+                  "type": "richtext",
+                  "id": "title_h",
+                  "label": "Title"
+              },
+      {
+                  "type": "richtext",
+                  "id": "text_h",
+                  "label": "Text"
+              },
+       {
+                  "type": "header",
+                  "content": "Middle info"
+              },
+       {
+                  "type": "richtext",
+                  "id": "text_m",
+                  "label": "Text"
+              },
+     
+      {
+                  "type": "header",
+                  "content": "Contact info"
+              },
+      {
+                  "type": "richtext",
+                  "id": "address",
+                  "label": "Address"
+              },
+      {
+      "id": "bg_color",
+      "type": "color",
+      "label": "Background color",
+      "default" : "#faebdb"
+    }
+    ]
+  }
+{% endschema %}

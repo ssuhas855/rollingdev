@@ -1,0 +1,277 @@
+<div class="login-box">
+    	  <a href="javascript:void(0)" class="cls_p">{% render 'icon-close-2' %}</a>
+      <div id="CustomerLoginForm" class="form-vertical">
+          	<div id="login-section-wrapper">
+            	<h3 class="LoginHeading">Sign in</h3>
+              <p>Please enter your email to log in.</p>
+            	{% form 'customer_login', novalidate: 'novalidate' %}
+
+                  {%- if form.errors -%}
+                    <div class="form-message form-message--error">
+                      <h2 class="h3 form-message__title " tabindex="-1" data-form-status>{{ 'contact.form.error_heading' | t }}</h2>
+                      {{ form.errors | default_errors }}
+                    </div>
+                  {%- endif -%}
+
+
+                  <div class="input-box email-address-input-box">
+                    <label for="CustomerEmail" class="full">Email address*</label>
+                    <input placeholder="Email Address"
+                      type="email"
+                      name="customer[email]"
+                      id="CustomerEmail"
+                      autocomplete="email"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      onfocusout="validateLoginForm()"
+                      {%- if form.errors contains 'form' -%}
+                        class="input--error"
+                        aria-invalid="true"
+                      {%- endif -%}
+                      >
+                  </div>
+
+                  {% if form.password_needed %}
+                    <div class="input-box password-input-box">
+                        <label for="CustomerPassword" class="full">Password</label>
+                        <input 
+                          type="password"
+                          value=""
+                          name="customer[password]"
+                          id="CustomerPassword"
+                          onfocusout="validateLoginForm()"
+                          {%- if form.errors contains 'form' -%}
+                            class="input--error"
+                            aria-invalid="true"
+                          {%- endif -%}
+                        >
+                    </div>
+                  {% endif %}
+
+              {% if form.password_needed %}
+                 <div class="input-box">
+                      <a href="#recover" id="RecoverPassword" class="text_link forgot-password-lable">Forgot password?</a>
+            </div>
+                  {% endif %}
+                 <div class="input-box input-btn-box login-btton-input-box">
+                   <input type="button" onClick="onSubmitLogin()" class="btn button white-button" value="LOG IN">
+                   
+                  <a href="#" id="customer_register_link"  class="btn button white-button create-about-lable">SIGN UP</a>
+                  
+                 </div>
+
+
+
+                  
+
+            	{% endform %}
+           </div>
+        
+        	<div id="create-section-wrapper">
+                <div class="input-box">
+                  <a href="/account/register" id="customer_register_link"  class="text_link hide">Create account</a>
+                  <h3 class="RegisterHeading">Create account</h3>
+                  <p>&nbsp;</p>
+                </div>
+
+                <div class="registration-form-wrapper">
+                  <form method="post" action="/account" id="RegisterForm" accept-charset="UTF-8" novalidate="novalidate">
+                    <div class="input-box">
+                      <label for="RegisterForm-FirstName" class="full">First Name</label>
+                      <input type="text" placeholder="" name="customer[first_name]" id="RegisterForm-FirstName" autocomplete="given-name">
+                    </div>
+                    <div class="input-box">
+                      <label for="RegisterForm-LastName" class="full">Last Name</label>
+                      <input type="text" placeholder="" name="customer[last_name]" id="RegisterForm-LastName" autocomplete="family-name">
+                    </div>
+                    <div class="input-box">
+                      <label for="{{ formId }}-email" class="full">Email address*</label>
+                      <input
+                        type="email"
+                        name="customer[email]"
+                             placeholder=""
+                        id="{{ formId }}-email"
+                        class="{% if form.errors contains 'email' %} input--error{% endif %}"
+                        {% if form.email %} value="{{ form.email }}"{% endif %}
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        aria-required="true"
+                        {%- if form.errors contains 'email' -%}
+                          class="input--error"
+                          aria-invalid="true"
+                          aria-describedby="{{ formId }}-email-error"
+                        {%- endif -%}
+                      >
+                      {%- if form.errors contains 'email' -%}
+                        <span id="{{ formId }}-email-error" class="input-error-message">
+                          <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                          {% include 'icon-error' %}
+                          <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                        </span>
+                      {%- endif -%}
+                    </div>
+                    <div class="input-box">
+                      <label for="{{ formId }}-password" class="full">Password</label>
+                      <input
+                        type="password"
+                        name="customer[password]"
+                             placeholder=""
+                        id="{{ formId }}-password"
+                        class="{% if form.errors contains 'password' %} input--error{% endif %}"
+                        aria-required="true"
+                        {%- if form.errors contains 'password' -%}
+                          class="input--error"
+                          aria-invalid="true"
+                          aria-describedby="{{ formId }}-password-error"
+                        {%- endif -%}
+                      >
+                      {%- if form.errors contains 'password' -%}
+                        <span id="{{ formId}}-password-error" class="input-error-message">
+                          {% include 'icon-error' %}
+                          <span>{{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.</span>
+                        </span>
+                      {%- endif -%}
+                    </div>
+                   <div class="input-box"> </div>
+                    <div class="input-box input-btn-box">
+                     
+                        <input type="button" value="Register" class="btn button white-button" onClick="onSubmitRegister()">
+                         
+                  <a href="#" id="" class="text_link login-lable">Return to login</a>
+                  
+                       
+                     
+                    </div>
+                  </form>
+                </div>
+            </div>
+      </div>
+
+      <div id="RecoverPasswordForm">
+
+        <div class="text-center">
+          <h2 id="RecoverHeading">Reset password</h2>
+          <p class="forget_pass_msg">{{ 'customer.recover_password.subtext' | t }}</p>
+        </div>
+
+        <div class="form-vertical ajax_reset_pwd">
+          {% form 'recover_customer_password' %}
+
+            {% comment %}
+              Add a hidden span to indicate the form was submitted succesfully.
+            {% endcomment %}
+            {% if form.posted_successfully? %}
+              <span class="hide reset-password-success"></span>
+            {% endif %}
+
+          <div class="input-box">
+            <label class="hide" for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+            <input  placeholder="Email Address"
+              type="email"
+              value=""
+              name="email"
+              id="RecoverEmail"
+              class="input-full{% if form.errors %} input--error{% endif %}"
+              autocorrect="off"
+              autocapitalize="off"
+              {% if form.errors %}
+                aria-invalid="true"
+                aria-describedby="RecoverEmail-email-error"
+              {%- endif -%}
+              >
+            {%- if form.errors -%}
+              <span id="RecoverEmail-email-error" class="input-error-message">
+                <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                {% include 'icon-error' %}
+                <span>{{ form.errors.messages['form'] }}</span>
+              </span>
+            {%- endif -%}
+             </div>
+
+          <div class="input-box"> </div>
+          
+			<div class="input-box input-btn-box">
+              <input type="button" class="btn button white-button" value="submit" onClick="onSubmitPasswordRecover()">
+             <a id="cancel-forget-password" class="text_link">cancel</a> 
+            </div>
+           
+          {% endform %}
+        </div>
+
+      </div>
+
+  	  <div class="login-strip hide">
+        <div class="lable login-lable">Login</div>
+        <div class="lable create-about-lable">Create account</div>
+        <div class="lable forgot-password-lable">Forgot password</div>
+  	  </div>
+  
+  	  <div class="form-errors">
+        <div class="login-email-error hide">Please insert a valid email address.</div>
+		<div class="login-password-error hide">Password must be between  6 and 15 characters.</div>
+  	  </div>
+  
+      {% comment %}
+        If accounts are set as optional, the following will be shown as an option
+        during checkout, not on the default /login page.
+      {% endcomment %}
+      {% if shop.checkout.guest_login %}
+        <div class="text-center">
+          <hr class="hr--invisible">
+          <h2>{{ 'customer.login.guest_title' | t }}</h2>
+
+          {% form 'guest_login' %}
+            <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+          {% endform %}
+        </div>
+      {% endif %}
+    </div>
+
+
+
+<style>
+  /* login form error css  */
+  .form-errors{
+      padding: 20px 0px 0 0px;
+      clear: both;
+  }
+  .login-email-error{ padding-bottom: 20px;}
+  .form-errors > * {      
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height:normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff;
+  }
+  #RecoverPasswordForm input.error::-webkit-input-placeholder,
+ #create-section-wrapper input.error::-webkit-input-placeholder,
+  input#CustomerEmail.error, input#CustomerPassword.error,
+  input#CustomerEmail.error::-webkit-input-placeholder, input#CustomerPassword.error::-webkit-input-placeholder{     
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.27;
+      letter-spacing: normal;
+      text-align: left;
+     
+  }
+  
+ /* registration form css */
+  .registration-form-wrapper.colapsed{
+    max-height: 0px;
+/*     transition: all 1s; */
+  }
+  .registration-form-wrapper{
+    
+/*     transition: all 1s; */
+
+    position: relative;
+    clear: both;
+  }
+  
+</style>
+
+<div class="login-hover"> </div>

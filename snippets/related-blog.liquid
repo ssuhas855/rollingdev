@@ -1,0 +1,97 @@
+{% if article.metafields["custom_fields"]["related_blog"] != blank %}
+ <div id="product_blog" class="full line_wrap">
+
+   <div id="pdp_head" class="full">
+<h4>MOre RECIPES YOU MAY LIKE</h4>
+  <a href="/blogs/recipes" class="full-unstyled-link"> VIEW ALL RECIPES {% render 'btn-arrow' %}</a>
+   </div>
+
+    <div id="product_row" class="full line_wrap">
+    {% for item in article.metafields["custom_fields"]["related_blog"] %}
+
+{% assign article = blank %}
+    {% assign article = blank %}
+    {% assign article_blog_handle = item.handle | split: "." %}
+    {% for a in blogs[article_blog_handle[0]].articles %}
+    {% if a.handle contains article_blog_handle[1] %}
+    {% assign article = a %}
+    {% break %}
+    {% endif %}
+    {% endfor %}
+   
+<div class="blog__post grid__item fade-up line_wrap">
+              
+<div class="article-card-wrapper card-wrapper underline-links-hover ">
+    
+    <div class="card articlecard ">
+      <div class="card_inner"><div class="article-card_image-wrapper card_media">
+            <div class="article-card_image">
+           <a href="{{ article.url }}" class="full">              
+               <img src="{{ article.image.src | img_url: '500x' }}" class="cf-article-image" />              
+            </a>
+            </div> 
+          </div>
+
+
+      </div>
+      <div class="card__content"> 
+        <div class="card__information">
+          <h3 class="card__heading{% if show_excerpt %} h2{% endif %}">
+            <a href="{{ article.url }}" class="full-unstyled-link">
+              {{ article.title | truncate: 50 | escape }} {% render 'btn-arrow' %}
+            </a>
+          </h3>
+          <div class="article-card__info caption-with-letter-spacing h5">
+            {%- if show_date -%}
+              <span class="circle-divider">{{ article.published_at | time_tag: format: 'date' }}</span>
+            {%- endif -%}
+            {%- if show_author -%}
+              <span>{{ article.author }}</span>
+            {%- endif -%}
+          </div>
+          {%- if show_excerpt -%}
+            {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+              <p class="article-card__excerpt rte-width">
+                {%- if article.excerpt.size > 0 -%}
+                  {{ article.excerpt | strip_html | truncatewords: 30 }}
+                {%- else -%}
+                  {{ article.content | strip_html | truncatewords: 30 }}
+                {%- endif -%}
+              </p>
+            {%- endif -%}
+            <div class="article-card__footer">
+              {%- if article.comments_count > 0 and blog.comments_enabled? -%}
+                <span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+        {%- if show_badge -%}
+          <div class="card__badge {{ settings.badge_position }}">
+            <span class="badge color-background-1">{{ 'blogs.article.blog' | t }}</span>
+          </div>
+        {%- endif -%}
+
+        {%- if article.metafields.custom.tag_text != blank -%}
+          <span class="tag_article" style="background:{{ article.metafields.custom.tab_background_color }};">{{ article.metafields.custom.tag_text | replace: '-', ' ' }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+     
+  </div>
+   {% if forloop.index == 2 %}
+  <div class="line_animation line_left"> </div> 
+  <div class="line_animation line_right"> </div> 
+          {% endif %}
+            </div>
+            {% endfor %}  
+      <div class="line_animation line_top"> </div>             
+    </div>
+
+<div class="line_animation line_top"> </div>             
+<div class="line_animation line_left"> </div>             
+<div class="line_animation line_right"> </div>             
+<div class="line_animation"> </div> 
+   
+   </div>
+              {% endif %}

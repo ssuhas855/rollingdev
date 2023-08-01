@@ -1,0 +1,40 @@
+{% if collection.metafields["custom_fields"]["image_and_text"] != blank %}
+   {% for item in collection.metafields["custom_fields"]["image_and_text"] %}
+<div class="full p-35 col_imgtext-section">
+<div class="full col_imgtext-wrapper" style="background:{{ item.background_color }};">
+ {% if item.image != blank %}
+<div class="col_img">
+<img src="{{ item.image }}" alt="" class="full" />
+</div>
+{%- endif -%}
+
+<div class="col_info">
+  <div class="col_infowrap">
+{% if item.title != blank %}
+<h3>{{ item.title }}</h3>
+{% endif %}
+
+    {% if item.sub_title != blank %}
+<h4>{{ item.sub_title }}</h4>
+{% endif %}
+     
+{% if item.body != blank %}
+<div class="col_info_rte full">
+{{ item.body }}
+</div>
+{% endif %}      
+
+{% if item.button_label != blank %}
+<a href="{{ item.button_link }}" class="button white-button">
+  {{ item.button_label }}
+</a>
+{% endif %}
+</div>
+  
+</div>
+
+  
+  </div
+</div>
+     {% endfor %}
+{% endif %}

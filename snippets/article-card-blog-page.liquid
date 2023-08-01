@@ -1,0 +1,39 @@
+<div class="full np_section p-35" id="blog_np_section">
+    
+<div class="full np_row line_wrap{%  if blog.handle == 'news-1' %} NewsWrapper{%  endif %}">   
+   {%- for article in blog.articles -%}
+<div class="np_box line_wrap">
+{% if article.title != blank %}
+<h5 class="full">{{ article.title }}</h5>
+{% endif %} 
+  {% comment %}   {% endcomment %} 
+
+{% unless blog.handle == 'recipes' %}
+{% if article.content != blank %}
+<p class="short_desc">{{ article.content | strip_html | truncate: 100 }}</p>
+{% endif %} 
+{% endunless %}
+    
+<span class="full">{{ article.published_at | date: '%b %d, %Y' }}</span>
+  {% if article.metafields.custom.link != blank %}
+  <a target="_blank" class="np_link full" href="{{ article.metafields.custom.link }}"> </a>
+    {% else %} 
+ <a class="np_link full" href="javascript:void(0)"> </a>
+  {% endif %} 
+
+  {% if forloop.index == 1 or forloop.index == 2 or forloop.index == 3 or forloop.index == 4 or forloop.index == 5 or forloop.index == 6 or forloop.index == 7 or forloop.index == 8 or forloop.index == 9 or forloop.index == 10 or forloop.index == 11 or forloop.index == 12 or forloop.index == 13 or forloop.index == 14 or forloop.index == 15 or forloop.index == 16 %}
+ <div class="line_load line_right"> </div> 
+  <div class="line_load"> </div>
+  {% else %} 
+  <div class="line_animation line_right"> </div> 
+  <div class="line_animation"> </div>
+  {% endif %} 
+  
+</div> 
+   {% endfor %}
+
+  <div class="line_load line_left"> </div>             
+ <div class="line_load line_top"> </div> 
+</div>
+  <div id="load" class="button">Show More</div>  
+</div>

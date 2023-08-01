@@ -1,0 +1,6 @@
+development:
+  password: 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
+  theme_id: 155863351572
+  store: rollingdev.myshopify.com
+  ignore_files:
+    - config/settings_data.json

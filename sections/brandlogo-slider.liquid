@@ -1,0 +1,84 @@
+<div class="brand-wrapper full p-35 fade-up" style="background:{{ section.settings.bg }};">
+  {% if section.settings.title != blank %}
+<h3 class="full center">{{ section.settings.title }}</h3>
+   {% endif %} 
+  <div class="brand-animation full fade-up">
+  <div class="brand-slider">
+  
+<div>
+<div class="brand-slider_row">        
+{% for block in section.blocks %}
+{% if block.settings.b_img != blank %}
+<span><img src="{{ block.settings.b_img | img_url:'250x' }}" alt="" width="" height="" class="full" /></span>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+    <div>
+<div class="brand-slider_row">        
+{% for block in section.blocks %}
+{% if block.settings.b_img != blank %}
+<span><img src="{{ block.settings.b_img | img_url:'250x' }}" alt="" width="" height="" class="full" /></span>
+{% endif %}
+{% endfor %}
+</div>
+</div>
+  
+
+
+  </div>
+</div>
+
+  {% if section.settings.btn_label != blank %}
+  <a href="{{ section.settings.btn_link }}" class="no_btn">{{ section.settings.btn_label }} {% render 'btn-arrow' %}</a>
+   {% endif %}
+
+  </div>
+
+{% schema %}
+  {
+    "name": "Brand logos",
+    "class": "brand-section",
+    "settings": [
+{
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              },
+      {
+                  "type": "color",
+                  "id": "bg",
+                  "label": "Background color"
+              },
+      {
+                  "type": "text",
+                  "id": "btn_label",
+                  "label": "Button label"
+              },
+               {
+                  "type": "url",
+                  "id": "btn_link",
+                  "label": "Button link"
+              }
+    ],
+    "blocks":[
+     {
+        "type":"image",
+         "name":"brand",
+            "settings":[
+              {
+                  "type": "image_picker",
+                  "id": "b_img",
+                  "label": "Image"
+              }
+              
+            ]
+     }
+    ],
+    "presets": [
+        {
+            "name": "Brand logos"
+        }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,73 @@
+  <div class="home_about page-width fade-up" style="background:{{ section.settings.bg_color }};">
+   <div class="home_aboutimg col-6 fade-up">
+    {%- if section.settings.image != blank -%}           
+    {{ section.settings.image | image_url: width: 540 | image_tag:
+    loading: 'lazy',
+     class: 'full',
+    sizes: sizes,
+    widths: '165, 360, 535, 750, 1070, 1500, 1600, 1800, 2000, 2200'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+   </div>
+ <div class="home_abouttext col-6 fade-up">
+   <div class="home_about_rte full">
+{%- if section.settings.title != blank -%}                   
+<h3 class="h3 full">{{ section.settings.title }}</h3>
+{%- endif -%}
+{%- if section.settings.text != blank -%}                   
+{{ section.settings.text }}
+{%- endif -%}     
+  {% if section.settings.btn_label != blank %}
+  <a href="{{ section.settings.btn_link }}" class="no_btn">{{ section.settings.btn_label }} {% render 'btn-arrow' %}</a>
+   {% endif %}
+   </div>
+     </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Home about",
+    "class": "homeab-section p-35",
+    "settings": [
+      {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "image"
+              },
+
+      {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              },
+          {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text"
+              },
+
+      {
+                  "type": "text",
+                  "id": "btn_label",
+                  "label": "Button label"
+              },
+               {
+                  "type": "url",
+                  "id": "btn_link",
+                  "label": "Button link"
+              },
+      {
+                  "type": "color",
+                  "id": "bg_color",
+                  "label": "Background color"
+              }
+    ],
+    "presets": [
+        {
+             "name": "Home about"
+        }
+    ]
+  }
+{% endschema %}

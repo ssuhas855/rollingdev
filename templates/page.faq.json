@@ -1,0 +1,193 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "d7330a6c-e42f-48d7-a660-89d245551129": {
+      "type": "faq-template",
+      "blocks": {
+        "c0e43ab0-aea0-4551-84b7-4f5b8b6d71b9": {
+          "type": "General-Question",
+          "settings": {
+            "general-title_a": "Where is RollinGreens made?",
+            "general-answer_a": "<p>RollinGreens products are proudly crafted in the USA.<\/p>"
+          }
+        },
+        "d597ed6f-af26-442d-a3b7-b92bfb1bb155": {
+          "type": "General-Question",
+          "settings": {
+            "general-title_a": "How long are RollinGreens products good for?",
+            "general-answer_a": "<p>RollinGreens products are shelf-stable and can live happily in your pantry for up to 24 months. Once cooked, our plant-based ME’EAT and CHIC’KEN can stay in the refrigerator for up to 7 days. <\/p>"
+          }
+        },
+        "2372d36d-6e92-447f-a0ba-5409ba875aec": {
+          "type": "General-Question",
+          "settings": {
+            "general-title_a": "How should I store my RollinGreens products?",
+            "general-answer_a": "<p>Keep RollinGreens in your pantry for up to 24 months (but we doubt you can wait that long to enjoy!).<\/p>"
+          }
+        },
+        "b0b380e7-e49a-409f-87fb-0e7bf5b1e6fb": {
+          "type": "General-Question",
+          "settings": {
+            "general-title_a": "Help! My local stores don’t carry RollinGreens? What can I do?",
+            "general-answer_a": "<p>Thanks for asking. You can help spread the word about RollinGreens to your local grocer by filling out this <a href=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0016\/2483\/4109\/files\/RG_OrderForm-2_InteractivePDF.pdf?v=1689312457\" target=\"_blank\" title=\"RollinGreens Request Form\">simple request form. <\/a>Let’s stock some shelves!<\/p>"
+          }
+        },
+        "e449b120-c532-4036-8add-eed5b609acd3": {
+          "type": "General-Question",
+          "settings": {
+            "general-title_a": "Have a suggestion for RollinGreens?",
+            "general-answer_a": "<p>We’re all ears. Please drop us a line: <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a>.<\/p>"
+          }
+        },
+        "c98d57c8-6177-41bc-bce5-e6051b16d64d": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "Are all RollinGreens products certified organic?",
+            "general-answer": "<p>RollinGreens products are vegan and certified gluten-free and Kosher. We strive to use USDA-certified organic ingredients wherever possible. <\/p>",
+            "general-answer2": ""
+          }
+        },
+        "3297b721-3df4-4420-919e-c9a42c9947a7": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "How do you pack so much plant-powered protein into RollinGreens products?",
+            "general-answer": "<p>We’re glad you asked! RollinGreens products primarily rely on peas and beans to pack a protein punch. Learn more about them <a href=\"\/pages\/our-commitment\" title=\"Our Commitment\">here<\/a><\/p>",
+            "general-answer2": ""
+          }
+        },
+        "26d927da-7106-4ead-a0f3-3c5a1aba8ec6": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "What’s so great about pea protein?",
+            "general-answer": "<p>Not only are peas chock full of whole-food nutrition, but they’re also super sustainable. Here’s why:<\/p><p>Peas use 15x less land and emit 10x fewer carbon emissions than beef. They’re a cold-tolerant and water efficient crop, using just 1\/5 the water needed to grow soybeans. Plus, pea protein is lightweight and shelf-stable, which means lower transportation costs, less waste, and zero negative environmental effects from refrigeration. <\/p>",
+            "general-answer2": ""
+          }
+        },
+        "00ac88ad-2779-456a-acb7-cf11f5210743": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "Are RollinGreens products allergen friendly?",
+            "general-answer": "<p>Our entire production facility is free from gluten and wheat to ensure that there is no chance of cross-contamination. All RollinGreens products contain zero soy, nuts, gluten, oils, wheat, fillers, or ingredients you can’t pronounce. We take quality control very seriously and make it a top priority to avoid any opportunities for cross-contamination.<\/p>",
+            "general-answer2": ""
+          }
+        },
+        "aad1fefd-fe55-4413-ac93-2b10a8c22a8a": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "How does RollinGreens protein stack up against traditional meat?",
+            "general-answer": "",
+            "general-answer2": "<table width=\"100%\" border=\"0\">\n  \n  <tbody>\n<tr class=\"hide_border\">\n  <td> <\/td>\n  <td> <\/td>\n  <td> <\/td>\n<\/tr>\n<tr>\n  <td> <\/td> \n    <td>ROLLINGREENS GROUND TACO ME’EAT 1 pouch<br>(8 SERVINGS)<\/td>\n    <td>1 LB GROUND BEEF<\/td>    \n  <\/tr>\n  <tr>\n    <td>CALORIES<\/td>\n    <td>480<\/td>\n    <td>1152<\/td>\n  <\/tr>\n  <tr>\n    <td>PROTEIN<\/td>\n    <td>64g<\/td>\n    <td>78g<\/td>\n  <\/tr>\n  <tr>\n    <td>CHOLESTEROL<\/td>\n    <td>0mg<\/td>\n    <td>354mg<\/td>\n  <\/tr>\n  <tr>\n    <td>FAT<\/td>\n    <td>1g<\/td>\n    <td>136g<\/td>\n  <\/tr>\n  <tr>\n    <td>LASTS<\/td>\n    <td>\n<strong>24 months<\/strong> in pantry<\/td>\n    <td>\n<strong>1-2 Days<\/strong> in Fridge <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>\n\n<table width=\"100%\" border=\"0\">\n  \n  <tbody>\n<tr class=\"hide_border\">\n  <td> <\/td>\n  <td> <\/td>\n  <td> <\/td>\n<\/tr>\n<tr>\n  <td> <\/td>\n    <td>ROLLINGREENS SALT &amp; PEPPER ME’EAT 1 pouch<br> (8 SERVINGS)<\/td>\n    <td>1 LB GROUND BEEF<\/td>    \n  <\/tr>\n  <tr>\n    <td>CALORIES<\/td>\n    <td>480<\/td>\n    <td>1152<\/td>\n  <\/tr>\n  <tr>\n    <td>PROTEIN<\/td>\n    <td>72g<\/td>\n    <td>78g<\/td>\n  <\/tr>\n  <tr>\n    <td>CHOLESTEROL<\/td>\n    <td>0mg<\/td>\n    <td>354mg<\/td>\n  <\/tr>\n  <tr>\n    <td>FAT<\/td>\n    <td>0.5g<\/td>\n    <td>136g<\/td>\n  <\/tr>\n  <tr>\n    <td>LASTS<\/td>\n    <td>\n<strong>24 months<\/strong> in pantry<\/td>\n    <td>\n<strong>1-2 Days<\/strong> in Fridge <\/td>\n  <\/tr>\n<\/tbody>\n<\/table>\n\n<table width=\"100%\" border=\"0\">\n  <tbody>\n<tr class=\"hide_border\">\n  <td><\/td>\n  <td> <\/td>\n  <td> <\/td>\n<\/tr>\n<tr>\n    <td><\/td>\n    <td>ROLLINGREENS CHORIZO ME’EAT 1 pouch<br> (8 SERVINGS)<\/td>\n    <td>1 LB GROUND PORK<\/td>\n  <\/tr>\n  <tr>\n    <td>CALORIES<\/td>\n    <td>480<\/td>\n    <td>2,060<\/td>\n  <\/tr>\n  <tr>\n    <td>PROTEIN<\/td>\n    <td>64g<\/td>\n    <td>112g<\/td>\n  <\/tr>\n   <tr>\n    <td>CHOLESTEROL<\/td>\n    <td>0mg<\/td>\n    <td>25mg<\/td>\n  <\/tr>\n   <tr>\n    <td>FAT<\/td>\n    <td>1g<\/td>\n    <td>176g<\/td>\n  <\/tr>\n   <tr>\n    <td>LASTS<\/td>\n    <td>\n<strong>24 months<\/strong> in pantry<\/td>\n    <td>\n<strong>1-2 Days<\/strong> in Fridge<\/td>\n  <\/tr>\n<\/tbody>\n<\/table>\n\n<table width=\"100%\" border=\"0\">\n  <tbody>\n<tr class=\"hide_border\">\n  <td><\/td>\n  <td> <\/td>\n  <td> <\/td>\n<\/tr>\n<tr>\n  <td><\/td>\n    <td>ROLLINGREENS CHOPPED CHICKEN FAJITA 1 pouch<br> (8 SERVINGS)<\/td>\n    <td>1 CHICKEN BREAST<\/td>    \n  <\/tr>\n  <tr>\n    <td>CALORIES<\/td>\n    <td>480<\/td>\n    <td>231<\/td>\n  <\/tr>\n  <tr>\n    <td>PROTEIN<\/td>\n    <td>56g<\/td>\n    <td>43g<\/td>\n  <\/tr>\n  <tr>\n    <td>CHOLESTEROL<\/td>\n    <td>0mg<\/td>\n    <td>119 mg<\/td>\n  <\/tr>\n  <tr>\n    <td>FAT<\/td>\n    <td>1g<\/td>\n    <td>4.4g<\/td>\n  <\/tr>\n  <tr>\n    <td>LASTS<\/td>\n    <td>\n<strong>24 months<\/strong> in pantry<\/td>\n    <td>\n<strong>1-2 Days<\/strong> in Fridge<\/td>\n  <\/tr>\n<\/tbody>\n<\/table>"
+          }
+        },
+        "1fe399e1-4ff3-49a2-9883-1b39429856f8": {
+          "type": "Ingredients-Question",
+          "settings": {
+            "general-title": "What is agar-agar?",
+            "general-answer": "<p>Agar-agar is a funny-sounding, all-natural, nutrient-dense superfood derived from red algae. We use it in our Classic Salt & Pepper and Chorizo Plant-Based ME’EAT as an all-natural binder should you choose to make it into burger, meatball, or sausage form.<\/p>",
+            "general-answer2": ""
+          }
+        },
+        "8c7d94a8-fb3a-41ae-b2b7-2ce02f1e5551": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "I placed an order with the wrong shipping address. What should I do?",
+            "shipping-answer": "<p>Please contact <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a> as soon as possible so we can try to correct it before it ships out.<\/p>"
+          }
+        },
+        "21e62a83-8d1b-49dd-8283-990a5e8d634a": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "How long will it take for my order to arrive?",
+            "shipping-answer": "<p>Our average order processing and delivery time is 5-10 days from the date of order. Please note that delivery times may increase during peak order times, such as during promos or holidays.<\/p>"
+          }
+        },
+        "ebc21d88-ef04-45e2-a173-74dd6c9a3cb3": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "Do you ship outside the U.S.?",
+            "shipping-answer": "<p>At the moment, we are proud to offer shipping to all 50 United States and Canada. <\/p>"
+          }
+        },
+        "d8ff2df8-71f9-45bb-921e-e97ccee1ebd0": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "What materials do you use in your shipping packaging? Is it planet-friendly?",
+            "shipping-answer": "<p>All RollinGreens shipping packaging, including tape, is biodegradable, compostable, or recyclable. We encourage you to consider reusing our packaging in order to further lower the environmental impact.<\/p><ul><li>Please check each packaging element for symbols \/ directions on how to properly dispose.<\/li><li>Paper mailers: compostable<\/li><li>Cushioned mailers \/ water-activated tape: curbside recyclable<\/li><li>Boxes: curbside recyclable<\/li><\/ul>"
+          }
+        },
+        "38d34eca-30e6-494d-a9bb-29a846179b3b": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "Do you offer returns or exchanges?",
+            "shipping-answer": "<p><strong>Returns<\/strong><\/p><p>While we are unable to accept returns, we can refund your order if you contact us within 30 days and provide details on your issue. To complete your refund, we require a receipt or proof of purchase.  If your refund is approved, a credit will automatically be applied to the original method of payment.<\/p><p><br\/>If 30 days have passed since your purchase date, we can’t guarantee you a refund or exchange, but please don’t hesitate to reach out to <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a> to see if we can make things right.<\/p><p><strong>Exchanges<\/strong><\/p><p>We are unable to offer exchanges, but if you have an issue with your order and need a replacement or refund, please send us an email at <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a>.<\/p>"
+          }
+        },
+        "11fdb76e-ba43-4f78-aff0-db4e86ad2719": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "Can I change or modify my order once it’s been placed?",
+            "shipping-answer": "<p>Our orders usually ship within 24 hours of purchase, but if you reach out to us before then we may be able to modify your order.<\/p>"
+          }
+        },
+        "3034b5e0-ab24-4eb8-9e71-d71417cb3764": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "How do I track my order?",
+            "shipping-answer": "<p>Your tracking link and information will be sent to you via email as soon as the order ships. If you have issues with the tracking link don't hesitate to reach out, email us at <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a>. <\/p>"
+          }
+        },
+        "ceb42b8d-fe45-4204-a686-36ba6f907978": {
+          "type": "Shipping-Question",
+          "settings": {
+            "shipping-title": "What do I do if my product is damaged during delivery?",
+            "shipping-answer": "<p>Please take photos of the damage and email us at <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a> and we will replace your damaged product.<\/p>"
+          }
+        },
+        "e9021ff2-b3c4-4d50-b4b4-720bc222e26d": {
+          "type": "Subscriptions-Question",
+          "settings": {
+            "subscriptions-title": "How do I create or manage my RollinGreens product subscription?",
+            "subscriptions-answer": "<p>To create a subscription to your favorite products, just select the subscription option on any of our items when adding them to your cart. You can choose the order frequency at this time as well. You can manage your subscriptions any time using the link here. You can skip, delay, or cancel your subscription via the site\/login.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "c0e43ab0-aea0-4551-84b7-4f5b8b6d71b9",
+        "d597ed6f-af26-442d-a3b7-b92bfb1bb155",
+        "2372d36d-6e92-447f-a0ba-5409ba875aec",
+        "b0b380e7-e49a-409f-87fb-0e7bf5b1e6fb",
+        "e449b120-c532-4036-8add-eed5b609acd3",
+        "c98d57c8-6177-41bc-bce5-e6051b16d64d",
+        "3297b721-3df4-4420-919e-c9a42c9947a7",
+        "26d927da-7106-4ead-a0f3-3c5a1aba8ec6",
+        "00ac88ad-2779-456a-acb7-cf11f5210743",
+        "aad1fefd-fe55-4413-ac93-2b10a8c22a8a",
+        "1fe399e1-4ff3-49a2-9883-1b39429856f8",
+        "8c7d94a8-fb3a-41ae-b2b7-2ce02f1e5551",
+        "21e62a83-8d1b-49dd-8283-990a5e8d634a",
+        "ebc21d88-ef04-45e2-a173-74dd6c9a3cb3",
+        "d8ff2df8-71f9-45bb-921e-e97ccee1ebd0",
+        "38d34eca-30e6-494d-a9bb-29a846179b3b",
+        "11fdb76e-ba43-4f78-aff0-db4e86ad2719",
+        "3034b5e0-ab24-4eb8-9e71-d71417cb3764",
+        "ceb42b8d-fe45-4204-a686-36ba6f907978",
+        "e9021ff2-b3c4-4d50-b4b4-720bc222e26d"
+      ],
+      "settings": {
+        "title": "FAQ",
+        "bg_color": "#f8b073",
+        "faq_bottom_text": "<p>Don't see the answer you're looking for? Get in touch at <a href=\"mailto:info@rollingreens.com\" title=\"mailto:info@rollingreens.com\">info@rollingreens.com<\/a> and we'll get right back to you<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d7330a6c-e42f-48d7-a660-89d245551129"
+  ]
+}

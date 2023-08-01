@@ -1,0 +1,203 @@
+{{ 'section-home-banner.css' | asset_url | stylesheet_tag }}
+<div class="full home_banner fade-up">
+  <div class="full home_slider">
+{%- for block in section.blocks -%}
+<div>
+<div class="fullslide full obj-box">
+  {%- if block.settings.select-option == 'image' -%}      
+    {%- if block.settings.fullslider != blank -%}           
+    {{ block.settings.fullslider | image_url: width: 1600 | image_tag:
+    loading: 'lazy',
+     class: 'full obj-cover small--hide',
+    sizes: sizes,
+    widths: '165, 360, 535, 750, 1070, 1500, 1600, 1800, 2000, 2200'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+
+    {%- if block.settings.mo_fullslider != blank -%}           
+    {{ block.settings.mo_fullslider | image_url: width: 750 | image_tag:
+    loading: 'lazy',
+     class: 'full obj-cover large--hide',
+    sizes: sizes,
+    widths: '165, 360, 535, 750'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+
+  {%- else -%} 
+  <div class="slide-video full obj-box">
+  <video class="obj-cover" playsinline="" muted="" loop="" src="{{ block.settings.video_url }}" autoplay="">
+  <source src="{{ block.settings.video_url }}" type="video/mp4">
+  </video>
+  <a href="{{ block.settings.button_link }}" class="vid_link full"> </a>
+  </div>
+  {%- endif -%}
+
+<div class="banner-cap full align_{{ block.settings.text-align }}" style="color:{{ block.settings.color }};">   
+  <div class="banner-rte">
+{%- if block.settings.text != blank -%}                   
+<h1 class="h1 m-0" style="color:{{ block.settings.color }};">{{ block.settings.text }}</h1>
+{%- endif -%}
+  </div>
+{%- if block.settings.button_label != blank -%}
+<div class="banner_buttons full">
+  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button  button--primary" {{ block.shopify_attributes }}>
+    {{ block.settings.button_label | escape }}
+  </a>
+</div>
+{%- endif -%}
+</div>
+</div> 
+</div>
+{%- endfor -%}
+  </div>          
+</div>
+{%- if section.settings.fix_icon_svg != blank -%}
+<div class="sticker_img">
+  {{ section.settings.fix_icon_svg }}
+</div>
+  {%- endif -%}
+{% schema %}
+  {
+    "name": "Home banner",
+    "tag": "section",
+    "class": "section home-banner-section fullset",
+    "settings": [
+        {
+          "type": "textarea",
+          "id": "fix_icon_svg",
+          "label": "Sticker svg"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "slide",
+      "name": "slide",      
+      "settings": [
+        {
+          "type": "select",
+          "id": "select-option",
+          "options": [
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ],
+          "default": "image",
+          "label": "Select option"
+        },
+         {
+          "type": "header",
+          "content": "Image"
+         },
+        {
+          "type": "image_picker",
+          "id": "fullslider",
+          "label": "Image",
+          "info": "Size: 1600 x 833px"
+        },
+        {
+          "type": "image_picker",
+          "id": "mo_fullslider",
+          "label": "Mobile image",
+          "info": "Size: 700 x 800px"
+        },
+        {
+          "type": "header",
+          "content": "Video"
+         },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video url [.mp4]",
+          "info": "Video size 5-10mb"
+        },
+        {
+          "type": "header",
+          "content": "Caption"
+         },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "default": "Button label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "color",
+          "id": "color",          
+          "default": "#fff",
+          "label": "Select text color"
+        },
+        {
+          "type": "select",
+          "id": "text-align",
+          "options": [
+            {
+              "value": "top_left",
+              "label": "Top left"
+            },
+             {
+              "value": "top_center",
+              "label": "Top center"
+            },
+             {
+              "value": "top_right",
+              "label": "Top right"
+            },
+            {
+              "value": "middle_left",
+              "label": "Middle left"
+            },
+             {
+              "value": "middle_center",
+              "label": "Middle center"
+            },
+             {
+              "value": "middle_right",
+              "label": "Middle right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "Bottom left"
+            },
+             {
+              "value": "bottom_center",
+              "label": "Bottom center"
+            },
+             {
+              "value": "bottom_right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "middle_center",
+          "label": "Text alignment"
+        }
+        
+      ]
+    }
+    
+    ],
+  "presets": [
+    {
+      "name": "Home banner"      
+    }
+  ]
+  }
+{% endschema %}

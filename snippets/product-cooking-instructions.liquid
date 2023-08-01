@@ -1,0 +1,58 @@
+{% if product.metafields["custom_fields"]["cooking_instructions_section"] != blank %}
+
+<div class="cooking-instructions full">
+
+  <div class="cooking_row">
+    {% for item in product.metafields["custom_fields"]["cooking_instructions_section"] %}
+
+      {% if item.show_video != blank %}
+         {% if item.video_url != blank %}
+         <div class="cooking_img cooking_video">              
+         <video class="obj-cover" playsinline="" poster="https://cdn.shopify.com/s/files/1/0016/2483/4109/files/black-poster.jpg" muted="" loop="" src="{{ item.video_url }}" autoplay="">
+            <source src="{{ item.video_url }}" type="video/mp4">
+         </video>
+         {% if item.icon != blank %}
+         <div class="cooking_icon">
+             {{ item.icon }}
+         </div>
+         {% endif %}
+         </div>
+         {% endif %}
+
+{% else %}
+
+
+    {% if item.image != blank %}
+            <div class="cooking_img">              
+         <img src="{{ item.image }}" alt="" class="full" />   
+               {% if item.icon != blank %}
+         <div class="cooking_icon">
+             {{ item.icon }}
+         </div>
+               {% endif %}
+               </div>
+          {% endif %}
+
+    {% endif %}
+
+    
+        
+
+      <div class="cooking_text">
+          {% if item.title != blank %}       
+                       <h4>{{ item.title }}</h4>         
+          {% endif %}
+        
+          {% if item.body != blank %}
+          <div class="cooking_rte full">
+                          {{ item.body }}
+            
+          </div>
+          {% endif %}
+        </div>
+        
+
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

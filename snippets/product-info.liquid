@@ -1,0 +1,38 @@
+{% if product.metafields["custom_fields"]["real_ingredients"] != blank %}
+   {% for item in product.metafields["custom_fields"]["real_ingredients"] %}
+<div class="full real_ingredients">
+<div class="real_ingredients row">
+
+{% if item.body != blank %}
+<div class="ingredients_box">
+  <h5>Crafted from</h5>
+<h4>REAL INGREDIENTS</h4>
+{{ item.body }}
+</div>
+{% endif %}
+
+{% if item.real_ingredient_image != blank %}
+<div class="real_ingredient_image">
+              {{ item.real_ingredient_image }}
+
+</div>
+{% endif %}
+
+{% if item.section1lb != blank %}
+<div class="section1lb">
+  {% if item.title_1lb_image != blank %}
+          <div class="title_1lb_image full">
+                          {{ item.title_1lb_image }}
+            
+          </div>
+          {% endif %}
+
+{{ item.section1lb }}
+
+</div>
+{% endif %}
+ 
+</div>
+</div>
+ {% endfor %}
+ {% endif %} 

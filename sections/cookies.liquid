@@ -1,0 +1,35 @@
+<div>
+  <span>{{ section.settings.cookiesinfo }}</span>
+  <a href="javascript:void(0);" class="cookie_accept txt_link">{% render 'cookie-close' %}</a> 
+</div>
+ {% unless section.settings.show_cookie  != blank %}
+<style>
+  div#shopify-section-cookies {
+	display: none !important;
+}
+  </style>
+   {% endunless %}
+{% schema %}
+  {
+    "name": "Cookies",
+    "settings": [
+      {
+          "type": "checkbox",
+          "id": "show_cookie",
+          "label": "Show?",
+          "default": false
+      },
+      {
+          "type": "richtext",
+          "id": "cookiesinfo",
+          "label": "Cookie Info"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

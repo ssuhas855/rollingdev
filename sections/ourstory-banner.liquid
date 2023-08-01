@@ -1,0 +1,180 @@
+{{ 'section-home-banner.css' | asset_url | stylesheet_tag }}
+<div class="full home_banner fade-up fade-load">
+  <div class="full ab_slider">
+<div class="fullslide full obj-box">
+  {%- if section.settings.select-option == 'image' -%}      
+    {%- if section.settings.fullslider != blank -%}           
+    {{ section.settings.fullslider | image_url: width: 1600 | image_tag:
+    loading: 'lazy',
+     class: 'full obj-cover small--hide',
+    sizes: sizes,
+    widths: '165, 360, 535, 750, 1070, 1500, 1600, 1800, 2000, 2200'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+
+    {%- if section.settings.mo_fullslider != blank -%}           
+    {{ section.settings.mo_fullslider | image_url: width: 750 | image_tag:
+    loading: 'lazy',
+     class: 'full obj-cover large--hide',
+    sizes: sizes,
+    widths: '165, 360, 535, 750'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+
+  {%- else -%} 
+  <div class="slide-video full obj-box">
+  <video class="obj-cover" playsinline="" muted="" loop="" src="{{ section.settings.video_url }}" autoplay="">
+  <source src="{{ section.settings.video_url }}" type="video/mp4">
+  </video>
+  <a href="{{ section.settings.button_link }}" class="vid_link full"> </a>
+  </div>
+  {%- endif -%}
+
+<div class="banner-cap full align_{{ section.settings.text-align }} small--hide" style="color:{{ section.settings.color }};">   
+  <div class="banner-rte">
+{%- if section.settings.text != blank -%}                   
+<h1 class="h1 m-0" style="color:{{ section.settings.color }};">{{ section.settings.text }}</h1>
+{%- endif -%}
+  </div>
+{%- if section.settings.button_label != blank -%}
+<div class="banner_buttons full">
+  <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button  button--primary" {{ section.shopify_attributes }}>
+    {{ section.settings.button_label | escape }}
+  </a>
+</div>
+{%- endif -%}
+</div>
+
+  
+</div> 
+
+<div class="banner-cap full align_{{ section.settings.text-align }} large--hide" style="color:{{ section.settings.color }};">   
+  <div class="banner-rte">
+{%- if section.settings.text != blank -%}                   
+<h1 class="h1 m-0" style="color:{{ section.settings.color }};">{{ section.settings.text }}</h1>
+{%- endif -%}
+  </div>
+{%- if section.settings.button_label != blank -%}
+<div class="banner_buttons full">
+  <a{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %} class="button  button--primary" {{ section.shopify_attributes }}>
+    {{ section.settings.button_label | escape }}
+  </a>
+</div>
+{%- endif -%}
+</div>
+    
+  </div>          
+</div>
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+{
+          "type": "select",
+          "id": "select-option",
+          "options": [
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ],
+          "default": "image",
+          "label": "Select option"
+        },
+         {
+          "type": "header",
+          "content": "Image"
+         },
+        {
+          "type": "image_picker",
+          "id": "fullslider",
+          "label": "Image",
+          "info": "Size: 1600 x 833px"
+        },
+        {
+          "type": "image_picker",
+          "id": "mo_fullslider",
+          "label": "Mobile image",
+          "info": "Size: 700 x 800px"
+        },
+        {
+          "type": "header",
+          "content": "Video"
+         },
+        {
+          "type": "text",
+          "id": "video_url",
+          "label": "Video url [.mp4]",
+          "info": "Video size 5-10mb"
+        },
+        {
+          "type": "header",
+          "content": "Caption"
+         },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Heading"
+        },
+        {
+          "type": "color",
+          "id": "color",          
+          "default": "#fff",
+          "label": "Select text color"
+        },
+        {
+          "type": "select",
+          "id": "text-align",
+          "options": [
+            {
+              "value": "top_left",
+              "label": "Top left"
+            },
+             {
+              "value": "top_center",
+              "label": "Top center"
+            },
+             {
+              "value": "top_right",
+              "label": "Top right"
+            },
+            {
+              "value": "middle_left",
+              "label": "Middle left"
+            },
+             {
+              "value": "middle_center",
+              "label": "Middle center"
+            },
+             {
+              "value": "middle_right",
+              "label": "Middle right"
+            },
+            {
+              "value": "bottom_left",
+              "label": "Bottom left"
+            },
+             {
+              "value": "bottom_center",
+              "label": "Bottom center"
+            },
+             {
+              "value": "bottom_right",
+              "label": "Bottom right"
+            }
+          ],
+          "default": "middle_center",
+          "label": "Text alignment"
+        }
+      
+    ]
+  }
+{% endschema %}

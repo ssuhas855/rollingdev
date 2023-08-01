@@ -1,0 +1,87 @@
+<div class="full np_section p-35">
+{% if section.settings.text != blank %}
+<h3 class="full center">{{ section.settings.text }}</h3>
+   {% endif %} 
+
+<div class="full np_row line_wrap">  
+ {% for block in section.blocks %}
+<div class="np_box line_wrap"> 
+{% if block.settings.title != blank %}
+<h5 class="full">{{ block.settings.title }}</h5>
+{% endif %} 
+{% if block.settings.text != blank %}
+{{ block.settings.text }}
+{% endif %} 
+{% if block.settings.date != blank %}
+<span class="full">{{ block.settings.date }}</span>
+{% endif %} 
+  {% if block.settings.link != blank %}
+  <a class="np_link full" target="_blank"  href="{{ block.settings.link }}"> </a>
+    {% endif %} 
+
+{% if forloop.index == 1 or forloop.index == 2 or forloop.index == 3 or forloop.index == 4 or forloop.index == 5 or forloop.index == 6 or forloop.index == 7 or forloop.index == 8 or forloop.index == 9 or forloop.index == 10 or forloop.index == 11 or forloop.index == 12 or forloop.index == 13 or forloop.index == 14 or forloop.index == 15 or forloop.index == 16 %}
+ <div class="line_load line_right"> </div> 
+  <div class="line_load"> </div>
+  {% else %} 
+  <div class="line_load line_right"> </div> 
+  <div class="line_animation"> </div>
+  {% endif %} 
+  
+</div>
+ {% endfor %}  
+
+<div class="line_load line_left"> </div>             
+ <div class="line_load line_top"> </div>             
+
+
+  
+</div>
+<div id="load" class="button">Show More</div>  
+</div>
+
+{% schema %}
+  {
+    "name": "News & Press",
+    "settings": [
+      {
+                  "type": "text",
+                  "id": "text",
+                  "label": "Title"
+              }
+      
+    ],
+    "blocks":[
+     {
+        "type":"text",
+         "name":"Text",
+            "settings":[
+              {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title",
+                "default": "The Daily camera"
+              },
+              {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text",
+                  "default": "<p>“Join Shark Tank Darling RollinGreens for a Taco Bar at Sprouts Boulder!”</p>"
+              },
+              {
+                  "type": "text",
+                  "id": "date",
+                  "label": "Date",
+                   "default": "may 13, 2023"
+              },
+               {
+                  "type": "text",
+                  "id": "link",
+                  "label": "Link",
+                  "default": "#"
+              }
+            ]
+     }
+    ]
+  }
+{% endschema %}
+

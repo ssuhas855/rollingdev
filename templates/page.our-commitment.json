@@ -1,0 +1,171 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "2b699d3b-d1bf-4508-b219-dd7c236de8d0": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "template--15219601113149__2b699d3b-d1bf-4508-b219-dd7c236de8d0-16873507330d11fdc5-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Doing better: for your body, our planet, and tastebuds everywhere",
+            "heading_size": "h0"
+          }
+        }
+      },
+      "block_order": [
+        "template--15219601113149__2b699d3b-d1bf-4508-b219-dd7c236de8d0-16873507330d11fdc5-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "5e023658-4cc8-4713-8d8b-214e0272604c": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15219601113149__5e023658-4cc8-4713-8d8b-214e0272604c-1687350723139dd3a4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chef-crafted, by nature",
+            "heading_size": "h1"
+          }
+        },
+        "template--15219601113149__5e023658-4cc8-4713-8d8b-214e0272604c-1687350723139dd3a4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Made for the conscious consumer, RollinGreens products contain minimal, truly clean ingredients you can feel good about. Plus, it’s all crafted in the USA.<\/p><h5>MADE WITHOUT<\/h5><ul><li>Soy<\/li><li>Nuts<\/li><li>Gluten<\/li><li>Wheat<\/li><\/ul><p><\/p><ul><li>OILS<\/li><li>FILLERS<\/li><li>ingredients you can’t pronounce<\/li><\/ul>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15219601113149__5e023658-4cc8-4713-8d8b-214e0272604c-1687350723139dd3a4-0",
+        "template--15219601113149__5e023658-4cc8-4713-8d8b-214e0272604c-1687350723139dd3a4-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RollinGreens-Our-Commitment.jpg",
+        "border_color": "#80d2c9",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "38d1724b-b731-4c35-b4c6-7b3a17c5ce6f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--15219601113149__38d1724b-b731-4c35-b4c6-7b3a17c5ce6f-1687350723139dd3a4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Plant-based protein that does better",
+            "heading_size": "h1"
+          }
+        },
+        "template--15219601113149__38d1724b-b731-4c35-b4c6-7b3a17c5ce6f-1687350723139dd3a4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At RollinGreens, our commitment to better taste and better nutrition extends to the hands that tend and harvest our ingredients. We are proud to help sustain over 400 farmers and strive to support all those who play a hand in creating our products. <\/p><p>We are passionate about using both our platform and our products to advocate for things that matter, like sustainability, conscientious water usage, animal welfare, supply chain transparency, harvest optimization, and so much more.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15219601113149__38d1724b-b731-4c35-b4c6-7b3a17c5ce6f-1687350723139dd3a4-0",
+        "template--15219601113149__38d1724b-b731-4c35-b4c6-7b3a17c5ce6f-1687350723139dd3a4-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RollinGreens-Pea-Protein.jpg",
+        "border_color": "#ed627b",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "85b3e50d-4d52-462d-901f-8de745907388": {
+      "type": "text-info",
+      "settings": {
+        "title": "Our Protein Powerhouses",
+        "text": "<p>How are our RollinGreens plant-based ME’EAT products so rich in protein? It’s all thanks to two unassuming (but pretty awesome) vegetables: peas and mushrooms.<\/p>",
+        "stitle_1": "PEAS",
+        "stext_1": "<p>All of our varieties rely on peas to pack a protein punch. Not only are peas chock full of whole-food nutrition, but they’re also super sustainable. Here’s why:<\/p><ul><li>Peas use 15x less land and emit 10x fewer carbon emissions than beef.<\/li><li>Peas are a cold-tolerant and water efficient crop, using just 1\/5 the water needed to grow soybeans.<\/li><li>Pea protein is lightweight and shelf-stable, which means lower transportation costs, less waste, and zero negative environmental effects from refrigeration.<\/li><\/ul>",
+        "stitle_2": "FERMENTED SHIITAKE MUSHROOMS",
+        "stext_2": "<p>We’ve added shiitake mushroom root to our Chopped Fajita Plant-Based CHIC’KEN (and more new flavors to come) for an added fermentation boost. Here’s why mushrooms are magic:<\/p><ul><li>Shiitake mushroom root helps to ferment our pea and rice protein, a process that results in a complete protein with all 9 essential amino acids.<\/li><li>The increased enzyme content from fermentation helps your body more readily absorb protein and nutrients.<\/li><li>Fermented products contain natural probiotics and are easy to digest, which is great for sensitive stomachs.<\/li><\/ul>",
+        "bg_color": "#f8b073"
+      }
+    },
+    "b3a14886-b493-4cd5-869c-ccd667f89d77": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "template--15219601113149__b3a14886-b493-4cd5-869c-ccd667f89d77-1687350723139dd3a4-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "MEET LINDSEY",
+            "heading_size": "h1"
+          }
+        },
+        "template--15219601113149__b3a14886-b493-4cd5-869c-ccd667f89d77-1687350723139dd3a4-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hi, I’m Lindsey Cunningham.<br\/><br\/>You might say I live, breathe, and (of course) eat all things RollinGreens. Here’s a little bit about how my story came to be…<br\/><br\/>Born from an entrepreneurial and very foodie family, I had always dreamed of opening my own restaurant. When I met my perfect match, Ryan (Chef Ko), we shared the same passion and set out to build a business together. What started out as a dream… turned into a food truck… which ended up becoming my career and lifelong obsession.<br\/><br\/>I am passionate about bringing great tasting, healthy food to the world, while inspiring others to do the same. I believe that even small changes, like incorporating one plant-based meal per week into your diet, can ladder up to big things — both for your health, and for the planet.<br\/><br\/>Thank you for supporting RollinGreens as we continue to roll on — changing the way the world eats, one delicious bite at a time.<\/p><p><br\/><br\/><br\/>Enjoy,<\/p><p><br\/><\/p><p>Lindsey Cunningham<\/p><p>CEO and Co-Founder of RollinGreens<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--15219601113149__b3a14886-b493-4cd5-869c-ccd667f89d77-1687350723139dd3a4-0",
+        "template--15219601113149__b3a14886-b493-4cd5-869c-ccd667f89d77-1687350723139dd3a4-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Lindsey1.jpg",
+        "border_color": "#ed627b",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "2b699d3b-d1bf-4508-b219-dd7c236de8d0",
+    "5e023658-4cc8-4713-8d8b-214e0272604c",
+    "38d1724b-b731-4c35-b4c6-7b3a17c5ce6f",
+    "85b3e50d-4d52-462d-901f-8de745907388",
+    "b3a14886-b493-4cd5-869c-ccd667f89d77"
+  ]
+}

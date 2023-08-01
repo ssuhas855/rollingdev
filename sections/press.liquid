@@ -1,0 +1,67 @@
+  {% if section.settings.title != blank %}
+<h3 class="full center">{{ section.settings.title }}</h3>
+   {% endif %} 
+  <div class="press-animation full">
+  <div class="press-animation_box press-slider">
+    <div>
+    <div class="press-slider_row">
+  {% for block in section.blocks %}
+  {% if block.settings.press_img != blank %}    
+  <span><img src="{{ block.settings.press_img | img_url:'x174' }}" alt="" width="" height="" class="full" />
+    
+  </span>      
+  {% endif %}
+  {% endfor %}
+   </div>
+  </div>
+<div>
+    <div class="press-slider_row">
+  {% for block in section.blocks %}
+  {% if block.settings.press_img != blank %}    
+  <span><img src="{{ block.settings.press_img | img_url:'x174' }}" alt="" width="" height="" class="full" />
+    
+  </span>      
+  {% endif %}
+  {% endfor %}
+   </div>
+  </div>
+    
+
+    
+  </div>
+    
+
+  </div>
+
+{% schema %}
+  {
+    "name": "Press animation",
+    "class":"press-section fade-up",
+    "settings": [
+{
+                  "type": "text",
+                  "id": "title",
+                  "label": "Title"
+              }
+    ],
+    "blocks":[
+     {
+        "type":"image",
+         "name":"Press",
+            "settings":[
+              {
+                  "type": "image_picker",
+                  "id": "press_img",
+                  "label": "Image"
+              }
+              
+            ]
+     }
+    ],
+    "presets": [
+        {
+            "name": "Press animation"
+        }
+    ]
+  }
+{% endschema %}

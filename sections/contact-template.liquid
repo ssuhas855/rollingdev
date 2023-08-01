@@ -1,0 +1,111 @@
+<div class="contact_section full fade-up fade-load p-35" style="background:{{ section.settings.bg_color }};">
+<div class="page-width">
+<div class="contact_wrap full line_wrap">
+<h3 class="full center">{{ page.title | remove : 'New' }}</h3>
+
+<div class="contact_info full line_wrap">
+  {%- if section.settings.image != blank -%}   
+  <div class="contact_img line_wrap">         
+    {{ section.settings.image | image_url: width: 640 | image_tag:
+    loading: 'lazy',
+     class: 'full',
+    sizes: sizes,
+    widths: '165, 360, 535, 750, 1070, 1500, 1600, 1800, 2000, 2200'
+    }}
+    
+  <div class="line_load line_right"> </div> 
+  </div>
+  {%- endif -%}
+
+  <div class="contact_email">
+
+<div class="contact_text line_wrap">{{ section.settings.text }}
+  <div class="line_load"> </div> 
+  </div>
+     <div class="contact_span full">
+  <span class="full"><a href="mailto:{{ section.settings.email }}">{{ section.settings.email }}</a></span>
+  <span class="full"><a href="tel:{{ section.settings.tel }}">{{ section.settings.tel }}</a></span>
+
+   {{ section.settings.ofs_time }}
+     </div>
+  </div>
+   <div class="line_load line_top"> </div> 
+ </div>
+
+<div class="contact_add full center line_wrap">
+{{ section.settings.address }}
+<div class="line_load line_top"> </div> 
+</div>
+
+
+<div class="line_load line_left"> </div>             
+<div class="line_load line_right"> </div> 
+ <div class="line_load line_top"> </div>             
+<div class="line_load"> </div>
+  
+  
+</div>
+  
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Contact",
+    "class": "Contact-section",
+    "settings": [
+        {
+                  "type": "header",
+                  "content": "Image"
+              },
+      {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image"
+              },
+       {
+                  "type": "header",
+                  "content": "Text"
+              },
+       {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Title"
+              },
+       {
+                  "type": "header",
+                  "content": "Email / contact"
+              },
+       {
+                  "type": "text",
+                  "id": "email",
+                  "label": "Email"
+              },
+      {
+                  "type": "text",
+                  "id": "tel",
+                  "label": "Tel"
+              },
+      {
+                  "type": "richtext",
+                  "id": "ofs_time",
+                  "label": "Off. Time"
+              },
+      {
+                  "type": "header",
+                  "content": "Address"
+              },
+      {
+                  "type": "richtext",
+                  "id": "address",
+                  "label": "Address"
+              },
+      {
+      "id": "bg_color",
+      "type": "color",
+      "label": "Background color",
+      "default" : "#faebdb"
+    }
+    ]
+  }
+{% endschema %}

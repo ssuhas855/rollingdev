@@ -1,0 +1,131 @@
+.fullslide{
+  position:relative;
+  min-height:600px;
+overflow: hidden;
+}
+
+.banner-cap {
+  position: absolute;
+  bottom: 72px;
+  z-index: 2;
+  color: #fff;
+  left: 0; 
+}
+.color_dark{
+  color:#3F443F!important;
+}
+.color_white{
+  color:#fff!important;
+}
+.banner-cap .banner__buttons {
+	position: static;
+	margin-top: 30px;
+}
+
+.vid_link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+.banner-cap.align_middle_left {
+  flex-direction: column;
+  align-items: start;
+  top: 50%;
+  bottom: inherit;
+  transform: translateY(-50%);
+}
+.banner-cap.align_middle_center {
+	flex-direction: column;
+	align-items: center;
+	top: 50%;
+	bottom: inherit;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	text-align: center;
+}
+.banner-cap.align_middle_center .button {	
+	margin: 0 auto;
+}
+.banner-cap.align_middle_right {
+	flex-direction: column;
+	align-items: start;
+  top: 50%;
+bottom: inherit;
+transform: translateY(-50%);
+}
+.banner-cap.align_bottom .banner__buttons {
+	margin-top: 0px;
+}
+
+.banner-cap {
+	max-width: 575px;
+	width: 100%;
+}
+.banner-cap.align_middle_left {
+	left: 100px;
+}
+.banner-cap.align_middle_right {
+	left: inherit;
+    right:100px;
+}
+.banner-cap.align_bottom_left {
+	left: 100px;
+}
+.banner-cap.align_bottom_right {
+	left: inherit;
+    right:100px;
+}
+.banner-rte {
+	margin: 0;
+	float: left;
+	width: 100%;
+}
+.home-banner-section{
+  margin-bottom:0px;
+}
+.slide-video.obj-box {
+	min-height: 458px;
+}
+.banner-cap.align_top_left,
+.banner-cap.align_middle_left,
+.banner-cap.align_bottom_left{
+	left: 98px;
+}
+.banner-cap.align_top_right,
+.banner-cap.align_middle_right,
+.banner-cap.align_bottom_right{
+	right: 98px;
+    left:inherit;
+}
+.banner-cap.align_top_left,
+.banner-cap.align_top_center,
+.banner-cap.align_top_right{
+	top:75px;
+}
+.banner-cap.align_middle_left,
+.banner-cap.align_middle_center,
+.banner-cap.align_middle_right{
+	top:50%;
+}
+.banner-cap.align_bottom_left,
+.banner-cap.align_bottom_center,
+.banner-cap.align_bottom_right{
+	top:inherit;
+  bottom:75px;
+}
+.banner-cap.align_top_center,
+.banner-cap.align_middle_center,
+.banner-cap.align_bottom_center{
+  left:50%;
+  transform:translateX(-50%);
+  text-align: center;
+}
+.banner-cap.align_middle_center{
+    transform:translate(-50%, -50%);
+}
+.ab_slider .banner-cap {
+	max-width: 490px;
+}

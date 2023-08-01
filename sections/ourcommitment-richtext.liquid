@@ -1,0 +1,19 @@
+<div class="page-width">
+{% if section.settings.text != blank %}
+    <h1 class="full h1 center">{{ section.settings.text | remove :'<p>' | remove :'</p>' }}</h1>
+        {% endif %}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Our commitment",
+    "settings": [
+      {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+       }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,113 @@
+<div class="full rolling-slider-section p-35">
+
+  <div class="full rolling-slider-row line_wrap">
+
+     <div class="rolling-slider-header">
+{% if section.settings.title != blank %}
+  <h3>{{ section.settings.title }}</h3>
+  {% endif %}
+  {% if section.settings.text != blank %}
+  {{ section.settings.text }}
+  {% endif %}
+    </div>
+
+     <div class="rolling-animation_wrapper full">   
+    <div class="rolling-animation_boxs rolling-slider">   
+  {% for block in section.blocks %}
+ <div>
+    <div class="rolling-slider_box line_wrap">
+       <div class="rolling-slider_img line_wrap">
+{%- if block.settings.image != blank -%}           
+    {{ block.settings.image | image_url: width: 400 | image_tag:
+    loading: 'lazy',
+     class: 'full',
+    sizes: sizes,
+    widths: '165, 360, 535, 750, 1070, 1500, 1600, 1800, 2000, 2200'
+    }}
+    {%- else -%}
+    {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+         
+<div class="line_animation line_right"> </div> 
+         
+         </div>
+
+      <div class="rolling-slider_text">
+{%- if block.settings.date != blank -%} 
+<h5>{{ block.settings.date }}</h5>
+      {% endif %} 
+      {% if block.settings.text != blank %}
+  {{ block.settings.text }}
+  {% endif %}
+  </div>
+
+<div class="line_animation line_left"> </div>             
+<div class="line_animation line_right"> </div> 
+ <div class="line_animation line_top"> </div>             
+<div class="line_animation"> </div>
+      
+          </div>
+    
+    </div>    
+{% endfor %}
+ <div class="last-slide-div">
+    <div class="last-slide-div">
+      
+    </div>
+ </div>
+  
+ </div>   
+</div>
+
+<div class="line_animation line_left"> </div>             
+<div class="line_animation line_right"> </div> 
+ <div class="line_animation line_top"> </div>             
+<div class="line_animation"> </div> 
+    
+</div>
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Rolling slider",
+    "settings": [
+{
+          "type": "text",
+          "id": "title",
+          "label": "Heading"
+        },
+      {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+    ],
+    "blocks":[
+     {
+        "type":"image",
+         "name":"Image",
+            "settings":[
+              {
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image"
+              },
+              {
+                  "type": "text",
+                  "id": "date",
+                  "label": "Date"
+              },
+              {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text"
+              }
+              
+              
+            ]
+     }
+    ]
+  }
+{% endschema %}
+
